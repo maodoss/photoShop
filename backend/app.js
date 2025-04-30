@@ -1,13 +1,20 @@
-const http = require('http');
 const express = require('express');
+const mongoose = require('mongoose');
+require('dotenv').config();
+const cors = require('cors');
+
+
 const app = express();
 
-app.get('/', (req, res) => {
-    res.status(200).json({ message: 'Test du serveur' });
-});
+const PORT = process.env.PORT || 5000;
+const MONGO_URI = process.env.MONGO_URI;
 
-const server = http.createServer(app);
+mongoose.connect(MONGO_URI)
+  .then(() => {
+    console.log('Connecté à MongoDB Atlas');
+    app.listen(PORT, () => {
+      console.log(`Serveur lancé sur le port ${PORT}`);
+    });
+  })
+  .catch(err => console.error('Erreur de connexion MongoDB :', err));
 
-server.listen(3000, () => {
-    console.log('Serveur démarré sur le port 3000');
-});
