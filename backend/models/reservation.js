@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 
 const reservationSchema = new mongoose.Schema({
   IdReservation: { type: Number, required: true, unique: true },
+  IdClient: { type: Number, required: true },
+IdCreneau: { type: Number, required: true },
   NomReservation: { type: String, required: true },
   Date: { type: Date, required: true },
   Lieu: { type: String, required: true },
