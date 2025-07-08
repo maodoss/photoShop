@@ -1,3 +1,5 @@
+//adminController.js
+
 import User from '../models/User.js';
 import Shooting from '../models/Shooting.js';
 

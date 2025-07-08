@@ -18,15 +18,23 @@ app.use(cors());
 
 // Import routes
 import authRoutes from './routes/authRoutes.js';
-import shootingRoutes from './routes/shootingRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
 import employeeRoutes from './routes/employeeRoutes.js';
+import creneauRoutes from './routes/creneauRoutes.js';
+import reservationRoutes from './routes/reservationRoutes.js';
+import paiementRoutes from './routes/paiementRoutes.js';
+import shootingRoutes from './routes/shootingRoutes.js';
+import notificationRoutes from './routes/notificationRoutes.js';
 
 // Mount routes
 app.use('/api/auth', authRoutes);
 app.use('/api/shootings', shootingRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/employee', employeeRoutes);
+app.use('/api/creneaux', creneauRoutes);
+app.use('/api/reservations', reservationRoutes);
+app.use('/api/paiements', paiementRoutes);
+app.use('/api/notifications', notificationRoutes);
 
 // API root route
 app.get('/', (req, res) => {

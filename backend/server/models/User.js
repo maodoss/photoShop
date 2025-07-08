@@ -32,7 +32,18 @@ const UserSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now
-  }
+  },
+  phone: {
+  type: String,
+  match: [/^[\+]?[0-9\s\-\(\)]{8,}$/, 'Please add a valid phone number']
+},
+avatar: {
+  type: String // URL vers l'avatar
+},
+isActive: {
+  type: Boolean,
+  default: true
+}
 });
 
 // Encrypt password using bcrypt

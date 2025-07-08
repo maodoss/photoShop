@@ -1,3 +1,5 @@
+//authController.js
+
 import User from '../models/User.js';
 
 // @desc    Register user

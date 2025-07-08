@@ -43,7 +43,19 @@ const ShootingSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now
-  }
+  },
+  service: {
+  type: mongoose.Schema.Types.ObjectId,
+  ref: 'Service'
+},
+reservation: {
+  type: mongoose.Schema.Types.ObjectId,
+  ref: 'Reservation'
+},
+prix: {
+  type: Number,
+  required: true
+}
 });
 
 export default mongoose.model('Shooting', ShootingSchema);

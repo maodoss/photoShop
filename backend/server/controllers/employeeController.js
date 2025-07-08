@@ -1,3 +1,5 @@
+//employeeController.js
+
 import Shooting from '../models/Shooting.js';
 
 // @desc    Get employee's assigned shootings

@@ -1,3 +1,4 @@
+//shootingController.js
 import Shooting from '../models/Shooting.js';
 
 // @desc    Create new shooting request
